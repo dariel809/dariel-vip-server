@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DARIEL VIP - CONTROL CENTER</title>
 
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,56 +17,53 @@
 
         <p>SERVIDOR PRIVADO TEAM CLUB</p>
 
-        <!-- BOTÓN LOGOUT CORREGIDO -->
-        <button onclick="window.location='/logout'">
-            CERRAR SESIÓN
-        </button>
-
-        <div id="hora">Cargando...</div>
+        <div id="hora">
+            Cargando...
+        </div>
 
     </header>
-
     <section id="estadoSistema">
 
-        <div class="estadoCard">
-            <h3>SERVIDOR</h3>
-            <span id="estadoServidor">ONLINE</span>
-        </div>
-
-        <div class="estadoCard">
-            <h3>DATABASE</h3>
-            <span id="estadoDB">ONLINE</span>
-        </div>
-
-        <div class="estadoCard">
-            <h3>API</h3>
-            <span id="estadoAPI">ONLINE</span>
-        </div>
-
-        <div class="estadoCard">
-            <h3>NETWORK</h3>
-            <span id="estadoNET">ONLINE</span>
-        </div>
-
-    </section>
-
-    <div class="card">
-        <h2>DISCO</h2>
-        <span id="disco">0%</span>
+    <div class="estadoCard">
+        <h3>SERVIDOR</h3>
+        <span id="estadoServidor">ONLINE</span>
     </div>
 
-    <div class="card">
-        <h2>SESIONES</h2>
-        <span id="sesiones">0</span>
+    <div class="estadoCard">
+        <h3>DATABASE</h3>
+        <span id="estadoDB">ONLINE</span>
     </div>
 
+    <div class="estadoCard">
+        <h3>API</h3>
+        <span id="estadoAPI">ONLINE</span>
+    </div>
+
+    <div class="estadoCard">
+        <h3>NETWORK</h3>
+        <span id="estadoNET">ONLINE</span>
+    </div>
+
+</section>
+<div class="card">
+    <h2>DISCO</h2>
+    <span id="disco">0%</span>
+</div>
+
+<div class="card">
+    <h2>SESIONES</h2>
+    <span id="sesiones">0</span>
+</div>
     <main>
+<section class="eventos">
 
-        <section class="eventos">
-            <h2>REGISTRO DE EVENTOS</h2>
-            <div id="logs"></div>
-        </section>
+    <h2>REGISTRO DE EVENTOS</h2>
 
+    <div id="logs">
+
+    </div>
+
+</section>
         <div class="card">
             <h2>CPU</h2>
             <span id="cpu">0%</span>
@@ -81,110 +78,112 @@
             <h2>TRÁFICO</h2>
             <span id="trafico">0 Mbps</span>
         </div>
-
-        <div class="card">
-            <h2>CONEXIONES</h2>
-            <span id="conexiones">0</span>
-        </div>
-
+<div class="card">
+    <h2>CONEXIONES</h2>
+    <span id="conexiones">0</span>
+</div>
     </main>
 
-    <section class="eventos">
 
-        <h2>IPS ACTIVAS</h2>
+<section class="eventos">
 
-        <table id="tablaIPs">
+    <h2>IPS ACTIVAS</h2>
 
-            <thead>
-                <tr>
-                    <th>IP</th>
-                    <th>PUERTO</th>
-                    <th>ESTADO</th>
-                </tr>
-            </thead>
+    <table id="tablaIPs">
 
-            <tbody id="ipsBody"></tbody>
+        <thead>
+            <tr>
+                <th>IP</th>
+                <th>PUERTO</th>
+                <th>ESTADO</th>
+            </tr>
+        </thead>
 
-        </table>
+        <tbody id="ipsBody"></tbody>
 
-    </section>
+    </table>
 
-    <section class="eventos">
+</section>
 
-        <h2>TRÁFICO EN TIEMPO REAL</h2>
+<section class="eventos">
 
-        <canvas id="graficaTrafico"></canvas>
+    <h2>TRÁFICO EN TIEMPO REAL</h2>
 
-    </section>
+    <canvas id="graficaTrafico"></canvas>
 
-    <section class="eventos">
+</section>
 
-        <h2>MAPA MUNDIAL</h2>
+<section class="eventos">
 
-        <div id="mapa"></div>
+    <h2>MAPA MUNDIAL</h2>
 
-    </section>
+    <div id="mapa"></div>
 
-    <section class="eventos">
+</section>
 
-        <h2>ACTIVIDAD GLOBAL</h2>
+<section class="eventos">
 
-        <table>
+    <h2>ACTIVIDAD GLOBAL</h2>
 
-            <thead>
-                <tr>
-                    <th>REGIÓN</th>
-                    <th>SESIONES</th>
-                </tr>
-            </thead>
+    <table>
 
-            <tbody>
-                <tr>
-                    <td>Estados Unidos</td>
-                    <td id="usa">0</td>
-                </tr>
+        <thead>
+            <tr>
+                <th>REGIÓN</th>
+                <th>SESIONES</th>
+            </tr>
+        </thead>
 
-                <tr>
-                    <td>España</td>
-                    <td id="espana">0</td>
-                </tr>
+        <tbody>
 
-                <tr>
-                    <td>Brasil</td>
-                    <td id="brasil">0</td>
-                </tr>
+            <tr>
+                <td>Estados Unidos</td>
+                <td id="usa">0</td>
+            </tr>
 
-                <tr>
-                    <td>Rep. Dominicana</td>
-                    <td id="rd">0</td>
-                </tr>
+            <tr>
+                <td>España</td>
+                <td id="espana">0</td>
+            </tr>
 
-                <tr>
-                    <td>Canadá</td>
-                    <td id="canada">0</td>
-                </tr>
+            <tr>
+                <td>Brasil</td>
+                <td id="brasil">0</td>
+            </tr>
 
-            </tbody>
+            <tr>
+                <td>Rep. Dominicana</td>
+                <td id="rd">0</td>
+            </tr>
 
-        </table>
+            <tr>
+                <td>Canadá</td>
+                <td id="canada">0</td>
+            </tr>
 
-    </section>
+        </tbody>
 
-    <section class="eventos">
+    </table>
 
-        <h2>CENTRO DE ALERTAS</h2>
+</section>
 
-        <div id="alertas"></div>
+<section class="eventos">
 
-    </section>
+    <h2>CENTRO DE ALERTAS</h2>
 
-    <!-- LIBRERÍAS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+    <div id="alertas"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+</section>
 
-    <script src="/assets/script.js"></script>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 
