@@ -5,7 +5,7 @@ const session = require("express-session");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// JSON body
+// JSON
 app.use(express.json());
 
 // sesiones
@@ -20,18 +20,18 @@ app.use(
     })
 );
 
-// ⚠️ FIX IMPORTANTE: servir archivos correctamente
+// archivos estáticos (IMPORTANTE)
 app.use(express.static(path.join(__dirname, "public")));
 
-// usuario
+// usuario demo
 const USER = "dariel";
 const PASS = "vip123";
 
-// control intentos
+// control intentos login
 let intentos = 0;
 let bloqueadoHasta = 0;
 
-// LOGIN PAGE
+// 🔥 LOGIN PAGE
 app.get("/", (req, res) => {
     if (req.session.auth) {
         return res.redirect("/dashboard");
@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "login.html"));
 });
 
-// LOGIN
+// 🔥 LOGIN LOGIC
 app.post("/login", (req, res) => {
     const ahora = Date.now();
 
@@ -56,7 +56,6 @@ app.post("/login", (req, res) => {
     if (usuario === USER && password === PASS) {
         req.session.auth = true;
         intentos = 0;
-
         return res.json({ ok: true });
     }
 
@@ -73,7 +72,7 @@ app.post("/login", (req, res) => {
     });
 });
 
-// DASHBOARD
+// 🔥 DASHBOARD PROTEGIDO
 app.get("/dashboard", (req, res) => {
     if (!req.session.auth) {
         return res.redirect("/");
@@ -82,14 +81,14 @@ app.get("/dashboard", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// LOGOUT
+// 🔥 LOGOUT
 app.get("/logout", (req, res) => {
     req.session.destroy(() => {
         res.redirect("/");
     });
 });
 
-// ⚠️ FIX CLAVE PARA RENDER
+// 🔥 START SERVER (RENDER FIX)
 app.listen(PORT, () => {
     console.log("Servidor iniciado en puerto " + PORT);
 });
