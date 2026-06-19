@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0b1220;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:30px;
+    border-bottom:2px solid #00ff88;
+}
+
+header h1{
+    color:#00ff88;
+    font-size:40px;
+}
+
+header p{
+    margin-top:10px;
+    color:#a0a0a0;
+}
+
+#hora{
+    margin-top:15px;
+    font-size:18px;
+    color:#00ff88;
+}
+
+main{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.card{
+    background:#111827;
+    width:250px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #1f2937;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card span{
+    font-size:35px;
+    color:#00ff88;
+    font-weight:bold;
+}.eventos{
+    margin:20px;
+    background:#111827;
+    border-radius:15px;
+    padding:20px;
+}
+
+.eventos h2{
+    margin-bottom:15px;
+    color:#00ff88;
+}
+
+#logs{
+    height:300px;
+    overflow-y:auto;
+    background:black;
+    padding:15px;
+    border-radius:10px;
+    font-family:Consolas, monospace;
+    color:#00ff88;
+}table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    color:#00ff88;
+    text-align:left;
+    padding:10px;
+    border-bottom:1px solid #333;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #222;
+}
+
+tr:hover{
+    background:#1a2233;
+}#estadoSistema{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    padding:20px;
+}
+
+.estadoCard{
+    background:#111827;
+    width:220px;
+    text-align:center;
+    padding:15px;
+    border-radius:12px;
+}
+
+.estadoCard h3{
+    margin-bottom:10px;
+}
+
+.estadoCard span{
+    font-size:20px;
+    font-weight:bold;
+    color:#00ff88;
+}canvas{
+    margin-top:20px;
+    width:100% !important;
+    max-height:350px;
+}#mapa{
+    height:500px;
+    width:100%;
+    border-radius:15px;
+    overflow:hidden;
+}#alertas{
+    background:black;
+    min-height:250px;
+    max-height:250px;
+    overflow-y:auto;
+    padding:15px;
+    border-radius:10px;
+    font-family:Consolas, monospace;
+}
+
+.alertaInfo{
+    color:#00ff88;
+    margin-bottom:8px;
+}
+
+.alertaWarning{
+    color:orange;
+    margin-bottom:8px;
+}
+
+.alertaCritical{
+    color:red;
+    margin-bottom:8px;
+}

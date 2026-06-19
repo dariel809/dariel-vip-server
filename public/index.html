@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARIEL VIP - CONTROL CENTER</title>
+
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>DARIEL VIP</h1>
+
+        <p>SERVIDOR PRIVADO TEAM CLUB</p>
+
+        <!-- BOTÓN LOGOUT CORREGIDO -->
+        <button onclick="window.location='/logout'">
+            CERRAR SESIÓN
+        </button>
+
+        <div id="hora">Cargando...</div>
+
+    </header>
+
+    <section id="estadoSistema">
+
+        <div class="estadoCard">
+            <h3>SERVIDOR</h3>
+            <span id="estadoServidor">ONLINE</span>
+        </div>
+
+        <div class="estadoCard">
+            <h3>DATABASE</h3>
+            <span id="estadoDB">ONLINE</span>
+        </div>
+
+        <div class="estadoCard">
+            <h3>API</h3>
+            <span id="estadoAPI">ONLINE</span>
+        </div>
+
+        <div class="estadoCard">
+            <h3>NETWORK</h3>
+            <span id="estadoNET">ONLINE</span>
+        </div>
+
+    </section>
+
+    <div class="card">
+        <h2>DISCO</h2>
+        <span id="disco">0%</span>
+    </div>
+
+    <div class="card">
+        <h2>SESIONES</h2>
+        <span id="sesiones">0</span>
+    </div>
+
+    <main>
+
+        <section class="eventos">
+            <h2>REGISTRO DE EVENTOS</h2>
+            <div id="logs"></div>
+        </section>
+
+        <div class="card">
+            <h2>CPU</h2>
+            <span id="cpu">0%</span>
+        </div>
+
+        <div class="card">
+            <h2>RAM</h2>
+            <span id="ram">0%</span>
+        </div>
+
+        <div class="card">
+            <h2>TRÁFICO</h2>
+            <span id="trafico">0 Mbps</span>
+        </div>
+
+        <div class="card">
+            <h2>CONEXIONES</h2>
+            <span id="conexiones">0</span>
+        </div>
+
+    </main>
+
+    <section class="eventos">
+
+        <h2>IPS ACTIVAS</h2>
+
+        <table id="tablaIPs">
+
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>PUERTO</th>
+                    <th>ESTADO</th>
+                </tr>
+            </thead>
+
+            <tbody id="ipsBody"></tbody>
+
+        </table>
+
+    </section>
+
+    <section class="eventos">
+
+        <h2>TRÁFICO EN TIEMPO REAL</h2>
+
+        <canvas id="graficaTrafico"></canvas>
+
+    </section>
+
+    <section class="eventos">
+
+        <h2>MAPA MUNDIAL</h2>
+
+        <div id="mapa"></div>
+
+    </section>
+
+    <section class="eventos">
+
+        <h2>ACTIVIDAD GLOBAL</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>REGIÓN</th>
+                    <th>SESIONES</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Estados Unidos</td>
+                    <td id="usa">0</td>
+                </tr>
+
+                <tr>
+                    <td>España</td>
+                    <td id="espana">0</td>
+                </tr>
+
+                <tr>
+                    <td>Brasil</td>
+                    <td id="brasil">0</td>
+                </tr>
+
+                <tr>
+                    <td>Rep. Dominicana</td>
+                    <td id="rd">0</td>
+                </tr>
+
+                <tr>
+                    <td>Canadá</td>
+                    <td id="canada">0</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <section class="eventos">
+
+        <h2>CENTRO DE ALERTAS</h2>
+
+        <div id="alertas"></div>
+
+    </section>
+
+    <!-- LIBRERÍAS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+    <script src="/assets/script.js"></script>
+
+</body>
+
+</html>

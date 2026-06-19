@@ -1,0 +1,51 @@
+<script>
+
+async function login() {
+
+    const usuario = document.getElementById("usuario").value;
+    const password = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    // limpiar error
+    error.innerText = "";
+
+    // validación básica
+    if (!usuario || !password) {
+        error.innerText = "Completa todos los campos";
+        return;
+    }
+
+    try {
+
+        const respuesta = await fetch("/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                usuario,
+                password
+            })
+        });
+
+        const datos = await respuesta.json();
+
+        if (datos.ok) {
+
+            // ir al dashboard
+            window.location.href = "/dashboard";
+
+        } else {
+
+            error.innerText = datos.msg || "Credenciales incorrectas";
+
+        }
+
+    } catch (err) {
+
+        error.innerText = "Error de conexión con el servidor";
+
+    }
+}
+
+</script>
